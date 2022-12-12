@@ -887,7 +887,7 @@ int main(int argc, char** argv) {
     cout<<"Press 'D' = Switch to DAY view."<<endl;
     cout<<"Press 'LMB' = Start RAIN."<<endl;
     cout<<"Press 'RMB' = Stop RAIN."<<endl<<endl;
-    cout<<"Group Members:\n          NAME              ID\nSHEIKH TAHMEED HOSSAIN, 20-42981-1\nUDAY KUMAR SARKER PRANTO, 20-42941-1\nMD. OMAR FARUK FAISAL, 20-43669-2\nFARIHA SHAHRIN,20-42929-1"<<endl;
+    cout<<"Group Members:\n          NAME              ID\nAritra Bhowmick, 20-43249-1\nMD.Mainul Hasan Plabon, 20-43451-1\nMD.Mashadul Kabir Tuhin, 20-43450-1\nMohibul Alom Ananda,18-36876-1"<<endl;
 
    glutDisplayFunc(display);
    glutKeyboardFunc(keyboard);
