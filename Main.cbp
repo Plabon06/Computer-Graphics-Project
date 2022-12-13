@@ -1,0 +1,483 @@
+ int j;
+
+    GLfloat p2=0.65f; GLfloat q2= 0.8f; GLfloat r2 = 0.08f;
+    int tringle3=30;
+
+
+
+
+    GLfloat tp3 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3f ( 0.0f,0.0f,0.3f);
+    glVertex2f (p2,q2);
+    for(j= 0;j<=tringle3; j++)
+    {
+        glVertex2f (
+                    p2+(r2*cos(j*tp3/tringle3)),
+                    q2+(r2*sin(j*tp3/tringle3))
+                    );
+
+
+
+    }
+    glEnd ();
+    }
+}
+///star
+void star(){
+     glLineWidth(4);
+     glBegin(GL_POINTS);
+     glColor3f(1.0,1.0,1.0);
+     glVertex2f(-0.85,0.85);
+     glVertex2f(-0.65,0.65);
+     glVertex2f(-0.5,0.75);
+     glVertex2f(-0.4,0.65);
+     glVertex2f(-0.45,0.45);
+     glVertex2f(0.0,0.90);
+     glVertex2f(0.20,0.70);
+     glVertex2f(0.85,0.85);
+     glVertex2f(0.65,0.65);
+     glVertex2f(0.45,0.45);
+
+     glEnd();
+}
+void drawBoat(){
+     glBegin(GL_QUADS); //Boat
+glColor3f(0.1f, 0.0f, 0.0f);
+glVertex2f(-0.040f, -0.720f); // x, y
+glVertex2f(0.060f, -0.820f); // x, y
+glVertex2f(0.660f, -0.820f); // x, y
+glVertex2f(0.760f, -0.720f); // x, y
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3f(1.0f, 0.0f, 0.0f);
+glVertex2f(0.060f, -0.720f); // x, y
+glVertex2f(0.160f, -0.620f); // x, y
+
+glVertex2f(0.560f, -0.620f); // x, y
+glVertex2f(0.660f, -0.720f); // x, y
+glEnd();
+
+glBegin(GL_QUADS); // window-boat
+glColor3f(1.0f, 1.0f, 0.0f);
+glVertex2f(0.210f, -0.650f); // x, y
+glVertex2f(0.210f, -0.70f); // x, y
+
+glVertex2f(0.310f, -0.70f); // x, y
+glVertex2f(0.310f, -0.650f); // x, y
+glEnd();
+
+glBegin(GL_QUADS); // window-boat
+glColor3f(1.0f, 1.0f, 0.0f);
+glVertex2f(0.410f, -0.650f); // x, y
+glVertex2f(0.410f, -0.70f); // x, y
+
+glVertex2f(0.510f, -0.70f); // x, y
+glVertex2f(0.510f, -0.650f); // x, y
+glEnd();
+
+glBegin(GL_TRIANGLES);
+glColor3f(0.0f, 0.0f, 1.0f);
+
+glVertex2f(0.360f, -0.520f);
+glVertex2f(0.260f, -0.620f);
+glVertex2f(0.460f, -0.620f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(0.0f, 0.0f, 0.0f);
+glVertex2f(0.360f, -0.520f);
+glVertex2f(0.360f, -0.43f);
+
+glEnd();
+
+glBegin(GL_TRIANGLES);
+glColor3f(1.0f, 0.0f, 1.0f);
+
+glVertex2f(0.360f, -0.430f);
+glVertex2f(0.44f, -0.46f);
+glVertex2f(0.360f, -0.50f);
+
+	glEnd();
+}
+void waterLine(){
+     glBegin(GL_LINES);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex2f(-0.20f, -0.90f);
+	glVertex2f(-0.40f, -0.90f);
+
+	glEnd();
+
+    glBegin(GL_LINES);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex2f(-0.80f, -0.80f);
+	glVertex2f(-1.0f, -0.80f);
+
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex2f(0.40f, -0.90f);
+	glVertex2f(0.60f, -0.90f);
+
+	glEnd();
+
+	glBegin(GL_LINES);
+glColor3f(1.0f, 1.0f, 1.0f);
+glVertex2f(0.80f, -0.60f);
+glVertex2f(1.0f, -0.60f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(1.0f, 1.0f, 1.0f);
+glVertex2f(0.0f, -0.50f);
+glVertex2f(-0.20f, -0.50f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(1.0f, 1.0f, 1.0f);
+glVertex2f(-0.70f, -0.60f);
+glVertex2f(-0.90f, -0.60f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(1.0f, 1.0f, 1.0f);
+glVertex2f(0.50f, -0.50f);
+glVertex2f(0.60f, -0.50f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(1.0f, 1.0f, 1.0f);
+glVertex2f(-0.20f, -0.70f);
+glVertex2f(-0.30f, -0.70f);
+
+glEnd();
+}
+///waterline night
+void waterLineNight(){
+     glBegin(GL_LINES);
+	glColor3f(0.50f, 0.50f, 0.60f);
+	glVertex2f(-0.20f, -0.90f);
+	glVertex2f(-0.40f, -0.90f);
+
+	glEnd();
+
+    glBegin(GL_LINES);
+	glColor3f(0.50f, 0.50f, 0.60f);
+	glVertex2f(-0.80f, -0.80f);
+	glVertex2f(-1.0f, -0.80f);
+
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.50f, 0.50f, 0.60f);
+	glVertex2f(0.40f, -0.90f);
+	glVertex2f(0.60f, -0.90f);
+
+	glEnd();
+
+	glBegin(GL_LINES);
+glColor3f(0.50f, 0.50f, 0.60f);
+glVertex2f(0.80f, -0.60f);
+glVertex2f(1.0f, -0.60f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(0.50f, 0.50f, 0.60f);
+glVertex2f(0.0f, -0.50f);
+glVertex2f(-0.20f, -0.50f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(0.50f, 0.50f, 0.60f);
+glVertex2f(-0.70f, -0.60f);
+glVertex2f(-0.90f, -0.60f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(0.50f, 0.50f, 0.60f);
+glVertex2f(0.50f, -0.50f);
+glVertex2f(0.60f, -0.50f);
+
+glEnd();
+
+glBegin(GL_LINES);
+glColor3f(0.50f, 0.50f, 0.60f);
+glVertex2f(-0.20f, -0.70f);
+glVertex2f(-0.30f, -0.70f);
+
+glEnd();
+}
+
+void water(){
+      glBegin(GL_QUADS);
+    glColor3f(0.5f, 1.0f, 1.0f);
+    glVertex2f(1.0f, -0.450f);    // x, y
+	glVertex2f(1.0f, -1.0f);    // x, y
+
+	glVertex2f(-1.0f, -1.0f);    // x, y
+	glVertex2f(-1.0f, -0.450f);    // x, y
+	glEnd();
+}
+
+///water night
+void waterNight(){
+      glBegin(GL_QUADS);
+    glColor3f(0.0f, 0.10f, 0.40f);
+    glVertex2f(1.0f, -0.450f);    // x, y
+	glVertex2f(1.0f, -1.0f);    // x, y
+
+	glVertex2f(-1.0f, -1.0f);    // x, y
+	glVertex2f(-1.0f, -0.450f);    // x, y
+	glEnd();
+}
+
+void bird(){
+    // 1st Bird
+glBegin(GL_POLYGON);
+
+
+
+glColor3f(0.0f, 0.0f, 0.0f); //color
+// x, y
+glVertex2f(-0.8f, 0.8f);// x, y
+glVertex2f(-0.75f, 0.8f);
+glVertex2f(-0.8f, 0.81f);
+glVertex2f(-0.85f, 0.85f);
+
+
+
+glEnd();
+// 2nd Bird
+glBegin(GL_POLYGON);
+
+
+
+glColor3f(0.0f, 0.0f, 0.0f); //color
+// x, y
+glVertex2f(-0.7f, 0.7f);// x, y
+glVertex2f(-0.65f, 0.7f);
+glVertex2f(-0.7f, 0.71f);
+glVertex2f(-0.75f, 0.75f);
+
+
+
+glEnd();
+// 3rd Bird
+glBegin(GL_POLYGON);
+
+
+
+glColor3f(0.0f, 0.0f, 0.0f); //color
+// x, y
+glVertex2f(-0.9f, 0.7f);// x, y
+glVertex2f(-0.85f, 0.7f);
+glVertex2f(-0.9f, 0.71f);
+glVertex2f(-0.95f, 0.75f);
+
+
+
+glEnd();
+
+
+}
+void cloud(){
+     {
+	//1st cloud left part
+    int i;
+
+    GLfloat p1=0.09f; GLfloat q1= 0.9f; GLfloat r1 = 0.07f;
+    int tringle2=40;
+
+    GLfloat tp2 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p1,q1);
+    for(i= 0;i<=tringle2; i++)
+    {
+        glVertex2f (
+                    p1+(r1*cos(i*tp2/tringle2)),
+                    q1+(r1*sin(i*tp2/tringle2))
+                    );
+
+
+    }
+    glEnd ();
+
+     //1st cloud Middle part
+    {
+
+
+    int i;
+
+    GLfloat p1=0.2f; GLfloat q1= 0.9f; GLfloat r1 = 0.1f;
+    int tringle2=40;
+
+    GLfloat tp2 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p1,q1);
+    for(i= 0;i<=tringle2; i++)
+    {
+        glVertex2f (
+                    p1+(r1*cos(i*tp2/tringle2)),
+                    q1+(r1*sin(i*tp2/tringle2))
+                    );
+     }
+    glEnd ();
+    }
+
+    //1st cloud right part
+    {
+
+
+    int i;
+
+    GLfloat p1=0.3f; GLfloat q1= 0.9f; GLfloat r1 = 0.07f;
+    int tringle2=40;
+
+    GLfloat tp2 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p1,q1);
+    for(i= 0;i<=tringle2; i++)
+    {
+        glVertex2f (
+                    p1+(r1*cos(i*tp2/tringle2)),
+                    q1+(r1*sin(i*tp2/tringle2))
+                    );
+
+
+    }
+    glEnd ();
+    }
+
+   }
+
+
+
+
+    {
+	//2nd cloud left part
+    int j;
+
+    GLfloat p2=-0.05f; GLfloat q2= 0.7f; GLfloat r2 = 0.07f;
+    int tringle3=40;
+
+    GLfloat tp3 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p2,q2);
+    for(j= 0;j<=tringle3; j++)
+    {
+        glVertex2f (
+                    p2+(r2*cos(j*tp3/tringle3)),
+                    q2+(r2*sin(j*tp3/tringle3))
+                    );
+
+
+    }
+    glEnd ();
+
+    //2nd cloud Middle part
+    {
+
+    int j;
+
+    GLfloat p2=0.05f; GLfloat q2= 0.7f; GLfloat r2 = 0.1f;
+    int tringle3=40;
+
+
+
+
+    GLfloat tp3 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p2,q2);
+    for(j= 0;j<=tringle3; j++)
+    {
+        glVertex2f (
+                    p2+(r2*cos(j*tp3/tringle3)),
+                    q2+(r2*sin(j*tp3/tringle3))
+                    );
+
+    }
+    glEnd ();
+    }
+
+    //2nd cloud right part
+    {
+
+
+    int j;
+
+    GLfloat p2=0.15f; GLfloat q2= 0.7f; GLfloat r2 = 0.07f;
+    int tringle3=40;
+
+
+
+
+    GLfloat tp3 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p2,q2);
+    for(j= 0;j<=tringle3; j++)
+    {
+        glVertex2f (
+                    p2+(r2*cos(j*tp3/tringle3)),
+                    q2+(r2*sin(j*tp3/tringle3))
+                    );
+
+
+
+    }
+    glEnd ();
+    }
+    }
+}
+
+//////nightcloud
+
+void cloudNight(){
+     {
+	//1st cloud left part
+    int i;
+
+    GLfloat p1=0.09f; GLfloat q1= 0.9f; GLfloat r1 = 0.07f;
+    int tringle2=40;
+
+    GLfloat tp2 =2.0f * PI  ;
+
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3f ( 0.7,0.7,0.80);
+    glVertex2f (p1,q1);
+    for(i= 0;i<=tringle2; i++)
+    {
+        glVertex2f (
+                    p1+(r1*cos(i*tp2/tringle2)),
+                    q1+(r1*sin(i*tp2/tringle2))
+                    );
+
+
+    }
+    glEnd ();
+
+    //1st cloud Middle part
+    {
+
